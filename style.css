@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color of the scrollbar thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners of the scrollbar track */
+}
+
+.main-heading {
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 4rem auto 20px auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    /* Dark background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 7px 7px;
+}
+
+/* Styles for the hamburger and logo sections */
+.hamberger,
+.user-account {
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger icon link */
+.hamberger a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Logo and navigation styling */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.logo-name {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    color: #000;
+}
+
+/* Navigation menu */
+.logo ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo ul li {
+    margin: 0 15px;
+}
+
+.logo ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for menu links */
+.logo ul li a:hover {
+    color: #555;
+}
+
+.user-account a img {
+    max-height: 35px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.hamberger a img {
+    max-height: 20px;
+    vertical-align: middle;
+}
+
+
+/* * Popup Menu Styles */
+.popup-menu {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 360px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.popup-content ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.popup-content ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popup-content ul li a:hover {
+    background-color: #000;
+    color: white;
+    border-radius: 7px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* login */
+
+.padding-top {
+    padding-top: 4rem;
+    background-color: #fff;
+}
+
+.main {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 35%;
+    margin: auto;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 27px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    /* Adjust width to match the button */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: calc(100% - 0px);
+    /* Ensure button width matches input fields */
+    padding: 13px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #000
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* General styling for the search container */
+.search-container {
+    width: 50%;
+    display: flex;
+    justify-content: center; /* Center align the search bar horizontally */
+    padding: 20px; /* Padding around the container */
+    margin: auto;
+}
+
+/* Styling for the form element */
+.search-container form {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    border-radius: 50px; 
+    overflow: hidden; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the input field */
+.search-container input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 5px 20px;
+    font-size: 16px;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+}
+
+/* Styling for the submit button */
+.search-button button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    margin: 0;
+    border: 2px solid black;
+}
+
+.search-button button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+/* cta buttons */
+.cta-buttons {
+    display: flex;
+    width: 40%;
+    margin: 3rem auto;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 2px solid black;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Subtle glow effect */
+}
+
+.cta-buttons a:hover {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Subtle glow effect */
+}
+
+
+/* main section */
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+
+.ads {
+    width: 15%;
+    height: 100vh;
+    background: #fff;
+    display: none;
+}
+
+.main-masala {
+    width: 68%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 30px 10px;
+}
+
+.main-masala h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 20px auto 30px auto;
+}
+
+.main-masala .main-heading {
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 15%;
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+    margin: 20px 10px;
+}
+
+.card:hover {
+    transform: scale(1.07);
+    /* Increase size slightly without affecting layout */
+}
+
+.card-img {
+    width: 100%;
+    /* Set the container's width relative to its parent */
+    aspect-ratio: 1 / 1;
+    /* Ensures the container has a 1:1 aspect ratio */
+    overflow: hidden;
+    /* Prevents the image from spilling outside the container */
+    position: relative;
+    border-radius: 10px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the container, cropping if necessary */
+    display: block;
+    /* Ensures no extra space appears below the image */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.card-discription {
+    color: grey;
+}
+
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+
+    .logo {
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .logo ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo ul li {
+        margin: 10px 0;
+    }
+
+    .hamberger a {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    .login-container {
+        padding: 50px 20px;
+        width: 80%;
+    }
+
+    .header {
+        display: flex;
+    }
+
+    .logo ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 7px 7px;
+        z-index: 999;
+    }
+
+    .logo ul li {
+        margin: 10px 20px;
+    }
+
+    .hamberger a {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    .logo ul.show {
+        display: flex;
+    }
+
+    .logo-name {
+        padding-top: 15px;
+    }
+
+    .main-heading {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 4rem auto 20px auto;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .main-masala {
+        width: 95%;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+    }
+
+    .cta-buttons a {
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .search-container {
+        width: 90%;
+    }
+}
+
+/* Styles for tablets (portrait and landscape) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .login-container {
+        padding: 50px;
+        width: 75%;
+    }
+
+    .search-container form {
+        width: 80%;
+    }
+
+    .main-masala {
+        width: 80%;
+    }
+
+    /* cta buttons */
+    .cta-buttons {
+        width: 50%;
+    }
+
+    .card {
+    margin-bottom: 20px;
+    }
+}
+
+
+/* How It Works Section */
+.how-it-works {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    color: #000;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px auto;
+}
+
+.step-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* About Us Section */
+.about-us {
+    padding: 0 80px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #3498db;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-link:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+
+.thanks {
+    text-align: center;
+    color: gray;
+    margin: 4rem auto;
+    font-size: 1.2rem;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: gray;
+    /* Change to your preferred hover color */
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 40px;
+    /* Size of social media icons */
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.4s ease-in-out;
+    filter: invert(100%);
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+.all-rights-reserved {
+    text-align: center;
+    color: white;
+    padding: 30px 0 0 0;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .step {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links li a {
+        margin-bottom: 17px;
+    }
+
+    .about-us {
+        padding: 0 10px;
+    }
+
+    .footer-social img {
+        width: 30px;
+    }
+
+}
